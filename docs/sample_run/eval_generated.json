@@ -1,0 +1,281 @@
+{
+ "results": [
+  {
+   "id": "G1",
+   "type": "answerable",
+   "question": "In the listed Interfaces specification, how many UART interfaces are included?",
+   "expected": [
+    "3xUART"
+   ],
+   "expected_sources": [
+    "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless / Interfaces"
+   ],
+   "observed_kind": "answer",
+   "observed": "The listed Interfaces specification includes 3 UART interfaces. [1][2][3]",
+   "cited": [
+    "C16QS Technical Specification Document (V2.9) - page 3, Interfaces",
+    "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless - Interfaces",
+    "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions - Comparison table – Find the Right LTE Cat 1bis IoT Module for Your Deployment"
+   ],
+   "latency_ms": 3122,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G2",
+   "type": "answerable",
+   "question": "What is the product description in the EU Declaration of Conformity for Cavli Inc.?",
+   "expected": [
+    "LTE MODEM"
+   ],
+   "expected_sources": [
+    "Declaration of Authorization / page 1 (part 1 of 2)"
+   ],
+   "observed_kind": "answer",
+   "observed": "The EU Declaration of Conformity for Cavli Inc. lists the product description as “LTE MODEM.” [1]",
+   "cited": [
+    "Declaration of Authorization - page 1 (part 1 of 2)"
+   ],
+   "latency_ms": 2834,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G3",
+   "type": "answerable",
+   "question": "In which 3GPP Release was LTE Cat 1bis introduced?",
+   "expected": [
+    "3GPP Release 13"
+   ],
+   "expected_sources": [
+    "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions / Introduction"
+   ],
+   "observed_kind": "answer",
+   "observed": "LTE Cat 1bis was introduced in 3GPP Release 13 in 2016. [1][2]",
+   "cited": [
+    "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions - Introduction",
+    "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions - Introduction"
+   ],
+   "latency_ms": 2778,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G4",
+   "type": "answerable",
+   "question": "What impedance must the output RF trace from Cavli modules be matched at when using an embedded antenna?",
+   "expected": [
+    "50 Ohm"
+   ],
+   "expected_sources": [
+    "Cavli Hubble FAQ | Device Management, Connectivity & Support / What are the design considerations when using an embedded antenna?"
+   ],
+   "observed_kind": "answer",
+   "observed": "The output RF trace from Cavli modules needs to be matched at 50 Ohm impedance when using an embedded antenna. [1]",
+   "cited": [
+    "Cavli Hubble FAQ | Device Management, Connectivity & Support - What are the design considerations when using an embedded antenna?"
+   ],
+   "latency_ms": 2693,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G5",
+   "type": "answerable",
+   "question": "In the regulatory list, what certification is listed for Japan?",
+   "expected": [
+    "TELEC"
+   ],
+   "expected_sources": [
+    "C16QS Technical Specification Document (V2.9) / page 4, Certiﬁcations"
+   ],
+   "observed_kind": "answer",
+   "observed": "Japan is listed with TELEC in the regulatory certifications list. [1]",
+   "cited": [
+    "C16QS Technical Specification Document (V2.9) - page 4, Certiﬁcations"
+   ],
+   "latency_ms": 2678,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G6",
+   "type": "answerable",
+   "question": "Which 3GPP Release specification is the C16QS module built to comply with?",
+   "expected": [
+    "Release 14"
+   ],
+   "expected_sources": [
+    "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless / About"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS module is built to comply with 3GPP Release 14 specifications. [1]",
+   "cited": [
+    "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless - About"
+   ],
+   "latency_ms": 2786,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G7",
+   "type": "answerable",
+   "question": "What is the hardware version listed in the document for Applicable Modules B+C?",
+   "expected": [
+    "v1.1"
+   ],
+   "expected_sources": [
+    "Declaration of Authorization / page 1 (part 2 of 2)"
+   ],
+   "observed_kind": "answer",
+   "observed": "The Declaration of Authorization lists the hardware version for Applicable Modules B+C as v1.1. [1]",
+   "cited": [
+    "Declaration of Authorization - page 1 (part 2 of 2)"
+   ],
+   "latency_ms": 2609,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G8",
+   "type": "answerable",
+   "question": "What company offers LTE Cat 1bis modules with advanced power-saving modes, integrated GNSS, and eSIM support?",
+   "expected": [
+    "Cavli Wireless"
+   ],
+   "expected_sources": [
+    "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions / LTE Cat 1bis IoT Module Applications"
+   ],
+   "observed_kind": "answer",
+   "observed": "Cavli Wireless offers LTE Cat 1bis modules with advanced power-saving modes, integrated GNSS for precise location tracking, and eSIM support for global connectivity. [1]",
+   "cited": [
+    "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions - LTE Cat 1bis IoT Module Applications"
+   ],
+   "latency_ms": 2817,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G9",
+   "type": "answerable",
+   "question": "Which Cavli C-Series module is excepted from variants that support GNSS capabilities?",
+   "expected": [
+    "C120GS"
+   ],
+   "expected_sources": [
+    "Cavli Hubble FAQ | Device Management, Connectivity & Support / Which C-Series modules have GNSS and GPS support?"
+   ],
+   "observed_kind": "answer",
+   "observed": "C120GS is the Cavli C-Series module excepted from variants that support GNSS capabilities in the Cavli Hubble FAQ. [1]",
+   "cited": [
+    "Cavli Hubble FAQ | Device Management, Connectivity & Support - Which C-Series modules have GNSS and GPS support?"
+   ],
+   "latency_ms": 2618,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G10",
+   "type": "answerable",
+   "question": "What chipset is shown under Power supply in the C16QS document?",
+   "expected": [
+    "GNSS Chipset"
+   ],
+   "expected_sources": [
+    "C16QS Technical Specification Document (V2.9) / page 5, Independent operation of GNSS and cellular (diagram)"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS Technical Specification Document V2.9 shows “GNSS Chipset” under “Power supply” in the independent operation of GNSS and cellular diagram. [1]",
+   "cited": [
+    "C16QS Technical Specification Document (V2.9) - page 5, Independent operation of GNSS and cellular (diagram)"
+   ],
+   "latency_ms": 2899,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G-U1",
+   "type": "unanswerable",
+   "question": "What is the price of this product and how many units are in stock?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "out_of_scope",
+   "observed": "This looks outside the documents I have indexed.",
+   "cited": [],
+   "latency_ms": 900,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "G-U2",
+   "type": "unanswerable",
+   "question": "Which firmware release fixes the eDRX wake-up bug?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "out_of_scope",
+   "observed": "This looks outside the documents I have indexed.",
+   "cited": [],
+   "latency_ms": 979,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  }
+ ],
+ "model": "gpt-5.5",
+ "run_at": "2026-11-21T14:10:38+00:00",
+ "report": "Run on 5 documents: 12 of 12 questions passed, 0 failed.\n\nNo question failed in this run.\n\n### Recommended documentation improvements\n\n- **Reconcile the C16QS regional variant count**: The product page *“C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless”* says there are **5** regional variants, while the *“C16QS Technical Specification Document”* says **7** variants. Update one or both documents so the number of C16QS variants/regions is consistent.\n\n- **Clarify the C16QS variant list versus variant count**: The product page *“C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless”* is flagged as saying **14** variants in one place, while the *“C16QS Technical Specification Document”* says **7**. Add a clear canonical variant table or explain whether the larger number refers to SKUs, bands, regions, or another grouping.\n\n- **Resolve the supported GNSS description**: The C16QS product page says supported GNSS systems are **GPS and BeiDou**, while *“LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions”* lists **GNA-L1 and GNB-L1+L5**, including **L5 for IRNSS/GPS**. Align the GNSS terminology and bands across the documents or explicitly distinguish constellations from receiver/band configurations.\n\n- **Add revision metadata to public-facing documents**: Three sources state no revision, version, or publication date: *“C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless”*, *“LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions”*, and *“Cavli Hubble FAQ | Device Management, Connectivity & Support”*. Add publication date, last-updated date, and version/revision fields so readers can determine which source is current when documents disagree.\n\n- **Provide public provenance for the C16QS technical specification**: The *“C16QS Technical Specification Document”* was uploaded as a file, so its origin and authenticity cannot be checked from a public link. Publish the specification at an official URL or add document control metadata identifying its source, revision, and approval status.",
+ "sources": [
+  "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+  "Declaration of Authorization",
+  "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions",
+  "Cavli Hubble FAQ | Device Management, Connectivity & Support",
+  "C16QS Technical Specification Document"
+ ]
+}

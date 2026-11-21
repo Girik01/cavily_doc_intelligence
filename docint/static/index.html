@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Documentation Intelligence</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#161826;--surface:#232532;--surface2:#2b2e3e;--text:#e9e9ed;--mute:#9397ab;--line:rgba(233,233,237,.14);--acc:#9184d9;--acc2:#a7a1db;--accfg:#161826;--accsoft:rgba(145,132,217,.16);
+ --ok:#5fd39a;--okbg:rgba(95,211,154,.14);--bad:#ff8f86;--badbg:rgba(255,143,134,.14);--warn:#f0c26b;--warnbg:rgba(240,194,107,.14);--info:#8fb4ff;--infobg:rgba(143,180,255,.14);--greybg:rgba(147,151,171,.16);
+ --font:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+@media(prefers-color-scheme:light){:root{--bg:#f4f5fb;--surface:#fff;--surface2:#eef0f8;--text:#1c1f2e;--mute:#6a6e82;--line:rgba(28,31,46,.13);--acc:#5d52b8;--acc2:#5d52b8;--accfg:#fff;--accsoft:rgba(93,82,184,.1);
+ --ok:#1c8454;--okbg:#e2f5ec;--bad:#b3261e;--badbg:#fde8e6;--warn:#8a5300;--warnbg:#fff3d9;--info:#1b5fd6;--infobg:#e8f0fe;--greybg:#eceef5}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14.5px/1.5 var(--font)}
+header{background:var(--surface);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.top{display:flex;align-items:center;gap:12px;padding:12px 24px;flex-wrap:wrap}.brand{font-weight:700;font-size:16px;display:flex;align-items:center;gap:10px}
+.logo{width:28px;height:28px;border-radius:8px;background:var(--acc);color:var(--accfg);display:grid;place-items:center;font-size:13px}
+.top .sub{color:var(--mute);font-size:13px;margin-left:auto}
+nav{display:flex;gap:2px;padding:0 20px;overflow-x:auto}
+.tab{padding:10px 14px;cursor:pointer;color:var(--mute);border-bottom:2px solid transparent;font-weight:600;white-space:nowrap}.tab b{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:var(--greybg);font-size:12px;margin-right:7px}
+.tab.on{color:var(--text);border-color:var(--acc)}.tab.on b{background:var(--acc);color:var(--accfg)}
+#job{display:none;background:var(--infobg);color:var(--text);border-bottom:1px solid var(--line);padding:9px 24px;font-size:13.5px}
+#job.show{display:block}#job.fail{background:var(--badbg)}#job.done{background:var(--okbg)}#job ul{margin:4px 0 0;padding-left:18px;color:var(--mute);max-height:96px;overflow:auto}
+main{max-width:1180px;margin:0 auto;padding:22px 24px 60px}
+h1{font-size:20px;margin:0 0 4px}h2{font-size:15px;margin:0 0 6px}h3{font-size:13.5px;margin:16px 0 6px;color:var(--acc2)}
+.sub2,.hint{color:var(--mute);font-size:13.5px;margin:2px 0 14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+input[type=text],select,textarea{background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:8px;padding:9px 11px;font:inherit}
+input[type=text]{width:100%}
+.btn{background:var(--acc);color:var(--accfg);border:0;border-radius:8px;padding:9px 16px;cursor:pointer;font:inherit;font-weight:600}.btn:hover{filter:brightness(1.1)}.btn:disabled{opacity:.45;cursor:default;filter:none}
+.btn.sec{background:transparent;color:var(--text);border:1px solid var(--line)}.btn.sec:hover{background:var(--surface2)}.btn.sm{padding:5px 11px;font-size:13px}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:8px 0}.grow{flex:1;min-width:200px}
+.badge{display:inline-block;padding:1px 9px;border-radius:999px;font-size:12px;font-weight:600;white-space:nowrap}
+.b-ok,.b-current,.b-PASS,.b-answer{background:var(--okbg);color:var(--ok)}.b-bad,.b-FAIL,.b-high{background:var(--badbg);color:var(--bad)}
+.b-warn,.b-not_verified,.b-medium,.b-open{background:var(--warnbg);color:var(--warn)}.b-grey,.b-superseded,.b-low,.b-out_of_scope,.b-reviewed{background:var(--greybg);color:var(--mute)}.b-info{background:var(--infobg);color:var(--info)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}th,td{border-bottom:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}th{color:var(--mute);font-weight:600;font-size:12.5px}
+.loc{color:var(--mute);font-size:12.5px}.mute{color:var(--mute)}.err{color:var(--bad);margin:8px 0}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}.chip{padding:4px 12px;border-radius:999px;border:1px solid var(--line);cursor:pointer;font-size:12.5px;background:transparent;color:var(--text);font-family:inherit}.chip:hover{background:var(--surface2)}.chip.on{background:var(--accsoft);border-color:var(--acc);color:var(--acc2)}
+.chip small{color:var(--mute);margin-right:5px}
+.flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:14px 0}.flow div{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px}.flow b{display:block;color:var(--acc2);margin-bottom:2px}
+.msg{margin:14px 0}.q{background:var(--acc);color:var(--accfg);display:inline-block;padding:8px 13px;border-radius:14px;font-weight:500;max-width:90%}
+.ans{white-space:pre-wrap;overflow-wrap:anywhere;margin:8px 0}.cite{display:inline-block;min-width:18px;text-align:center;background:var(--acc);color:var(--accfg);border-radius:9px;font-size:11.5px;font-weight:700;padding:0 5px;margin:0 2px}
+.cit{border:1px solid var(--line);border-left:4px solid var(--acc);border-radius:8px;padding:8px 11px;margin:6px 0;font-size:13px;background:var(--bg)}.cit.rv{border-left-color:var(--warn)}
+details{margin:6px 0}summary{cursor:pointer;color:var(--acc2);font-size:13px}pre{white-space:pre-wrap;background:var(--bg);padding:8px 10px;border-radius:8px;font-size:12.5px;overflow-wrap:anywhere;margin:4px 0;border:1px solid var(--line)}
+.amb{background:var(--infobg);border-radius:8px;padding:8px 11px;margin:8px 0;font-size:13.5px}
+.item{border-left:4px solid var(--warn)}.item.high{border-left-color:var(--bad)}.item.low{border-left-color:var(--mute)}.item.reviewed{opacity:.8;border-left-color:var(--ok)}
+.quote{background:var(--surface2);border-radius:6px;padding:5px 8px;margin:4px 0;font-size:12.5px;white-space:pre-wrap;overflow-wrap:anywhere}
+.step{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line)}.step:last-child{border:0}.step .n{flex:none;width:26px;height:26px;border-radius:50%;background:var(--accsoft);color:var(--acc2);display:grid;place-items:center;font-weight:700}
+.md h1,.md h2,.md h3{margin:14px 0 6px}.md p{margin:6px 0}.md code{background:var(--surface2);padding:0 4px;border-radius:4px;font-size:12.5px}.md ul{margin:4px 0;padding-left:20px}
+.empty{padding:40px 20px;text-align:center;color:var(--mute)}
+.old{color:var(--bad)}.new{color:var(--ok)}
+#fab{position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:var(--acc);color:var(--accfg);border:0;cursor:pointer;font-size:26px;box-shadow:0 6px 24px rgba(0,0,0,.35);z-index:20}
+#chat{display:none;position:fixed;right:22px;bottom:22px;width:400px;height:600px;max-height:calc(100vh - 44px);max-width:calc(100vw - 24px);background:var(--surface);border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 40px rgba(0,0,0,.45);z-index:21;flex-direction:column;overflow:hidden}
+#chat.open{display:flex}#chat.big{width:min(860px,calc(100vw - 44px));height:calc(100vh - 44px)}
+#chat .ch{display:flex;align-items:center;gap:8px;padding:12px 14px;border-bottom:1px solid var(--line);font-weight:700}#chat .ch span{flex:1}
+#chat .ch button{background:transparent;border:0;color:var(--mute);cursor:pointer;font-size:18px;padding:2px 6px}#chat .ch button:hover{color:var(--text)}
+#chat .log{flex:1;overflow:auto;padding:12px 14px}#chat .log .card{margin:6px 0;padding:12px 14px;background:var(--bg)}
+#chat .cf{border-top:1px solid var(--line);padding:10px 12px}#chat .chips{margin:0 0 8px}
+@media(max-width:900px){.flow{grid-template-columns:1fr 1fr}}
+</style></head><body>
+<header><div class="top"><div class="brand"><span class="logo">C</span>Documentation Intelligence</div><div class="sub" id="meta"></div></div>
+<nav id="nav"></nav></header>
+<div id="job"></div>
+<main id="main"></main>
+<button id="fab" title="Ask the documents" aria-label="Open the chat">&#128172;</button>
+<div id="chat"><div class="ch"><span>Ask the documents</span><button id="cbig" title="Enlarge">&#9974;</button><button id="cx" title="Close">&#10005;</button></div>
+ <div class="log" id="log"></div>
+ <div class="cf">
+  <div class="row" style="margin:0"><input type="text" id="q" class="grow" maxlength="500" placeholder="Ask a question and press Enter"><button class="btn" id="go">Ask</button></div>
+  <details><summary>Options</summary><div class="row"><label class="mute">Search <select id="mode"><option value="hybrid">hybrid</option><option value="dense">dense</option><option value="keyword">keyword</option></select></label>
+  <label class="mute"><input type="checkbox" id="old"> include older versions</label></div></details></div></div>
+<script>
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+async function api(path,opts){const r=await fetch(path,opts);let j=null;try{j=await r.json()}catch(e){}
+ if(!r.ok)throw new Error((j&&(j.detail||j.error))||('HTTP '+r.status));return j}
+const post=(p,b)=>api(p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b||{})});
+const TABS=[['src','Sources'],['rvw','Expert review'],['evl','Evaluation']];
+let S=null,tab='src',busy=false;
+const fmt=s=>s?String(s).replace('T',' ').slice(0,16):'';
+const badge=(t,c)=>`<span class="badge b-${c||t}">${esc(t)}</span>`;
+
+function nav(){ $('nav').innerHTML=TABS.map(([k,l],i)=>`<div class="tab ${k===tab?'on':''}" data-t="${k}"><b>${i+1}</b>${l}</div>`).join('');
+ document.querySelectorAll('.tab').forEach(t=>t.onclick=()=>go(t.dataset.t))}
+async function refresh(){S=await api('/api/state');$('meta').textContent=`${S.documents.length} documents · ${S.indexed} passages indexed · ${S.models.chat} + ${S.models.embeddings}`}
+async function go(t){tab=t||tab;nav();try{await refresh()}catch(e){}
+ await ({src:vSources,rvw:vReview,evl:vEval})[tab]()}
+
+// ---------- background jobs ----------
+let timer=null;
+function runJob(path,method,after){ if(busy)return; $('job').className='show';$('job').textContent='Starting…';
+ (method==='DELETE'?fetch(path,{method:'DELETE'}).then(async r=>{const j=await r.json();if(!r.ok)throw new Error(j.detail||'failed');return j}):post(path)).then(()=>watch(after)).catch(e=>{$('job').className='show fail';$('job').textContent=e.message})}
+function watch(after){busy=true;lockButtons(true);clearInterval(timer);
+ const tick=async()=>{const j=await api('/api/job');
+  $('job').className='show '+(j.state==='failed'?'fail':j.state==='done'?'done':'');
+  $('job').innerHTML=`<b>${esc(j.name||'')}</b> · ${j.state==='running'?'running '+j.seconds+' s':j.state}${j.error?' · '+esc(j.error):''}<ul>${j.steps.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>`;
+  if(j.state!=='running'){clearInterval(timer);busy=false;lockButtons(false);if(after)await after(j);await go()}};
+ tick();timer=setInterval(tick,1500)}
+function lockButtons(v){document.querySelectorAll('.jobbtn').forEach(b=>b.disabled=v||b.dataset.off==='1')}
+
+// ---------- 1. sources ----------
+function addForm(first){
+ return `<div class="card"><h2>${first?'Step 1 · Add your sources':'Add more sources'}</h2>
+  <div class="loc">${first?'Nothing is loaded yet. Give the system the documents it should answer from: paste links to public PDFs or web pages (one per line) and/or choose PDF files. Then press Process.':'Paste more links or choose more PDF files.'}</div>
+  <div style="margin:10px 0 4px"><b>Links</b> (public PDFs or web pages, one per line)</div>
+  <textarea id="links" rows="4" style="width:100%" placeholder="https://example.com/product-page&#10;https://example.com/datasheet.pdf"></textarea>
+  <div style="margin:10px 0 4px"><b>PDF files</b></div>
+  <div class="row"><input type="file" id="files" accept="application/pdf,.pdf" multiple><span class="mute">Choose as many as you need, one or several at a time. Each choice is added to the list below.</span></div>
+  <div id="flist"></div>
+  <div class="row"><input type="text" id="lab" placeholder="Version name for these sources (optional), e.g. V1.0" style="width:380px"></div>
+  <details><summary>Optional: documents that exist but you cannot access</summary>
+   <div class="loc">One per line as <code>Title | reason</code>. They are named in "not verified" answers so the gap is visible.</div>
+   <textarea id="na" rows="2" style="width:100%" placeholder="Hardware manual | needs a customer login">${esc((S.not_accessible||[]).map(n=>n.title+' | '+n.reason).join('\n'))}</textarea></details>
+  <div class="row"><button class="btn jobbtn" id="proc">Process the sources</button><span class="mute">Downloads, reads, splits into passages with page or section, embeds, then compares the documents with each other.</span></div></div>`}
+let PICKED=[];
+function showPicked(){$('flist').innerHTML=PICKED.length?PICKED.map((f,i)=>`<div class="row" style="margin:3px 0"><span>${esc(f.name)}</span><span class="loc">${(f.size/1048576).toFixed(1)} MB</span><button class="btn sec sm" data-x="${i}">Remove</button></div>`).join(''):'';
+ document.querySelectorAll('[data-x]').forEach(b=>b.onclick=()=>{PICKED.splice(+b.dataset.x,1);showPicked()})}
+function bindAdd(){
+ PICKED=[];
+ $('files').onchange=e=>{[...e.target.files].forEach(f=>{if(!PICKED.some(p=>p.name===f.name&&p.size===f.size))PICKED.push(f)});e.target.value='';showPicked()};
+ $('proc').onclick=async()=>{if(busy)return;const links=$('links').value.trim(),fl=PICKED;if(!links&&!fl.length){alert('Add at least one link or PDF.');return}
+  const na=$('na').value.split('\n').map(l=>l.split('|')).filter(x=>x[0].trim()).map(x=>({title:x[0],reason:(x[1]||'').trim()}));
+  $('job').className='show';$('job').textContent='Starting…';
+  try{await post('/api/not-accessible',{items:na});const fd=new FormData();fd.append('links',links);fd.append('label',$('lab').value);[...fl].forEach(f=>fd.append('files',f));
+   const r=await fetch('/api/sources/process',{method:'POST',body:fd});const j=await r.json();if(!r.ok)throw new Error(j.detail||'failed');watch()}
+  catch(e){$('job').className='show fail';$('job').textContent=e.message}}}
+async function vSources(){
+ const docs=S.documents;
+ if(!docs.length){$('main').innerHTML=`<h1>1 · Sources</h1><p class="sub2">The system answers only from the documents you give it. Start here.</p>${addForm(true)}`;bindAdd();return}
+ $('main').innerHTML=`<h1>1 · Sources</h1><p class="sub2">The documents the system answers from. Use the chat bubble (bottom right) to ask questions. "Fetch again" re-downloads every link and adds a new version only when the content changed.</p>
+ <div class="card"><div class="row"><button class="btn jobbtn" id="ing">Fetch again and re-index</button><span class="mute">Safe to repeat. Files you uploaded are not re-downloaded.</span><span style="flex:1"></span><button class="btn sec sm jobbtn" id="reset">Start over (remove everything)</button></div></div>
+ ${docs.map(d=>`<div class="card"><div class="row"><h2 style="margin:0">${esc(d.title)}</h2>${badge(d.doc_type,'info')}<span style="flex:1"></span><button class="btn sec sm jobbtn rm" data-id="${esc(d.doc_id)}" data-t="${esc(d.title)}">Remove</button></div>
+  <div class="loc">${/^https?:/.test(d.url)?`<a href="${esc(d.url)}" target="_blank" rel="noopener" style="color:var(--acc2)">${esc(d.url.length>110?d.url.slice(0,110)+'…':d.url)}</a>`:esc(d.url)}</div>
+  <table style="margin-top:8px"><tr><th>Version</th><th>Status</th><th>Revision</th><th>Published / date</th></tr>
+  ${d.versions.slice().reverse().map(v=>`<tr><td><b>v${v.version}</b>${v.label?' · '+esc(v.label):''}</td><td>${badge(v.status)}</td><td>${esc(v.revision||'none stated')}</td><td>${esc(v.published||v.date_note||'none stated')}</td></tr>`).join('')}</table>
+  <details><summary>More details (source site, pages, passages, hash)</summary><table>${d.versions.slice().reverse().map(v=>`<tr><td>v${v.version}</td><td class="loc">${esc(v.host||'')}</td><td>${v.pages?v.pages+' pages':'–'}</td><td>${v.passages} passages</td><td class="loc">${esc(v.sha256)}</td></tr>`).join('')}</table></details>
+  <details class="nv" data-id="${esc(d.doc_id)}"><summary>Add a newer version of this document</summary>
+   <div class="loc">The old version is kept and marked outdated; the new one becomes the answer source. The version name is what you type.</div>
+   <div class="row"><input type="file" class="nvf" accept="application/pdf,.pdf"><span class="mute">or</span><input type="text" class="nvu grow" placeholder="https://… link to the newer version"></div>
+   <div class="row"><input type="text" class="nvl" placeholder="Version name, e.g. V2.9" style="width:220px"><button class="btn sm jobbtn nvb">Upload as newer version</button></div></details></div>`).join('')}
+ ${S.not_accessible.length?`<h3>Listed as not accessible</h3><div class="card">${S.not_accessible.map(n=>`<div style="margin:6px 0"><b>${esc(n.title)}</b><div class="loc">${esc(n.reason)}</div></div>`).join('')}</div>`:''}
+ ${addForm(false)}<div id="addp"></div>`;
+ $('ing').onclick=()=>runJob('/api/ingest');
+ $('reset').onclick=()=>{if(busy)return;if(confirm('Remove every document and start from an empty page?'))runJob('/api/reset')};
+ document.querySelectorAll('.rm').forEach(b=>b.onclick=()=>{if(busy)return;if(confirm('Remove "'+b.dataset.t+'" (all versions) from the system? You can add it again later.'))runJob('/api/source/'+b.dataset.id,'DELETE')});
+ document.querySelectorAll('.nv').forEach(box=>{const id=box.dataset.id;box.querySelector('.nvb').onclick=async()=>{if(busy)return;
+  const f=box.querySelector('.nvf').files[0],u=box.querySelector('.nvu').value.trim(),l=box.querySelector('.nvl').value;
+  if(!f&&!u){alert('Choose a PDF file or paste a link first.');return}
+  $('job').className='show';$('job').textContent='Starting…';
+  try{if(u&&!f){await post('/api/source/link',{url:u,doc_id:id,label:l});watch();return}
+   const fd=new FormData();fd.append('file',f);fd.append('doc_id',id);fd.append('label',l);
+   const r=await fetch('/api/upload',{method:'POST',body:fd});const j=await r.json();if(!r.ok)throw new Error(j.detail||'upload failed');watch()}
+  catch(e){$('job').className='show fail';$('job').textContent=e.message}}});
+ bindAdd();await vRev()}
+
+// ---------- 2. ask ----------
+let CHAT=[];
+function fmtAns(t){return esc(t).replace(/\[(\d+)\]/g,'<span class="cite">$1</span>')}
+function cardFor(r){
+ const kind={answer:'Answer',not_verified:'Not found in the documents',out_of_scope:'Not about these documents'}[r.kind]||r.kind;
+ const src=(r.citations||[]).map(c=>c.url===null||c.status==='open review item'
+  ?`<div class="cit rv"><span class="cite">${c.n}</span><b>Flagged for expert review</b><div class="loc">${esc(c.snippet)}</div></div>`
+  :`<div class="cit"><span class="cite">${c.n}</span><b>${esc(c.title)}</b> · ${c.page?'page '+c.page:esc(c.location)}
+   <div class="loc">revision: ${esc(c.revision||'none stated')} · ${badge(c.status)}${c.url&&/^http/.test(c.url)?` · <a href="${esc(c.url)}" target="_blank" rel="noopener" style="color:var(--acc2)">open source</a>`:''}</div>
+   <details><summary>Show the text it is based on</summary><pre>${esc(c.text||c.snippet)}</pre></details></div>`).join('');
+ const ret=(r.retrieved||[]).map((p,i)=>`<tr><td>${i+1}</td><td>${esc(p.title)}</td><td>${esc(p.location)}</td><td>${p.dense_rank||'–'}</td><td>${p.keyword_rank||'–'}</td></tr>`).join('');
+ return `<div class="row">${badge(kind,r.kind)}</div>
+ ${r.ambiguous?`<div class="amb"><b>Which one do you mean?</b> ${esc(r.clarifying_question||'')}</div>`:''}
+ <div class="ans">${fmtAns(r.answer)}</div>
+ ${(r.missing||[]).length?`<div class="loc"><b>Could not verify:</b> ${r.missing.map(esc).join('; ')}</div>`:''}
+ ${src?`<h3>Sources</h3>${src}`:''}
+ ${ret?`<details><summary>How it was found (${r.retrieved.length} passages, ${r.latency_ms||''} ms)</summary><table><tr><th>#</th><th>Document</th><th>Location</th><th>Dense rank</th><th>Keyword rank</th></tr>${ret}</table></details>`:''}`}
+const CHATLOG=[];
+function chatMsg(q,html){return `<div class="msg"><span class="q">${esc(q)}</span></div><div class="card">${html}</div>`}
+function initChat(){
+ const chat=$('chat'),log=$('log');
+  $('fab').onclick=()=>{chat.classList.add('open');$('fab').style.display='none';$('q').focus();if(!log.children.length)log.innerHTML='<div class="empty">Ask about the documents you loaded. Every answer shows its source. (Add sources first on the Sources tab.)</div>'};
+ $('cx').onclick=()=>{chat.classList.remove('open');$('fab').style.display=''};
+ $('cbig').onclick=()=>chat.classList.toggle('big');
+ const ask=async q=>{q=(q||$('q').value).trim();if(!q)return;$('q').value='';log.querySelector('.empty')&&(log.innerHTML='');
+  const id='a'+Date.now();log.insertAdjacentHTML('beforeend',`<div class="msg"><span class="q">${esc(q)}</span></div><div class="card" id="${id}"><span class="mute">Searching the documents…</span></div>`);log.scrollTop=log.scrollHeight;
+  try{const r=await post('/api/ask',{question:q,mode:$('mode').value,include_superseded:$('old').checked});$(id).innerHTML=cardFor(r)}
+  catch(e){$(id).innerHTML=`<div class="err">${esc(e.message)}</div>`}log.scrollTop=log.scrollHeight};
+ $('go').onclick=()=>ask();$('q').onkeydown=e=>{if(e.key==='Enter')ask()};}
+
+// ---------- 3. revisions ----------
+function parseChange(q){const m=q.match(/^(.*?):\s+(.*?)\s+->\s+(.*)$/);return m?{k:m[1],a:m[2],b:m[3]}:null}
+function changeCard(c){const rows=c.evidence.map(e=>parseChange(e.quote)).filter(Boolean);
+ return `<div class="card"><div style="margin-bottom:6px">${esc(c.summary)}</div>${rows.length
+  ?`<table><tr><th>Fact</th><th>Before (outdated)</th><th>After (current)</th></tr>${rows.map(r=>`<tr><td><b>${esc(r.k)}</b></td><td class="old">${esc(r.a)}</td><td class="new">${esc(r.b)}</td></tr>`).join('')}</table><div class="loc" style="margin-top:6px">A model summarises the difference between the two texts; code keeps only values that appear in the old or the new text.</div>`
+  :`<details><summary>Changed lines (${c.evidence.length})</summary>${c.evidence.map(e=>`<div class="quote">${esc(e.quote)}</div>`).join('')}</details>`}</div>`}
+async function vRev(){
+ const R=await api('/api/revision');
+ $('addp').innerHTML=`${R.changes.length?`<h3>What changed between versions</h3>${R.changes.slice().reverse().map(changeCard).join('')}`:''}
+ ${R.log.length?`<h3>History</h3><div class="card">${R.log.slice().reverse().map(l=>`<div style="margin:4px 0">${badge(l.kind,l.kind==='upload'?'ok':'info')} <span class="loc">${fmt(l.at)}</span> ${esc(l.text)}</div>`).join('')}</div>`:''}`}
+
+// ---------- 4. expert review ----------
+let FILTER='asked';
+async function vReview(){
+ const [items,decs]=await Promise.all([api('/api/review'),api('/api/decisions')]);
+ const open=i=>i.status.startsWith('open');const asked=i=>(i.asked||[]).length>0;const shown=items.filter(i=>FILTER==='all'||(FILTER==='asked'?asked(i):(FILTER==='open')===open(i)));
+ const who=(()=>{try{return localStorage.getItem('reviewer')||''}catch(e){return ''}})();
+ $('main').innerHTML=`<h1>2 · Expert review</h1><p class="sub2">The system compares the documents with each other and lists every conflict or outdated source here, so a person can decide. “Raised by a question” shows only the items that a user's question actually ran into; “All open” shows everything found. Nothing is resolved by the AI. Each one waits here with the evidence from both sides. A person records a decision; until then the answers report the item as unresolved. Closed items stop being flagged in answers.</p>
+ <div class="chips">${[['asked','Raised by a question'],['open','All open'],['reviewed','Reviewed'],['all','All']].map(([k,l])=>`<button class="chip ${FILTER===k?'on':''}" data-f="${k}">${l} (${k==='all'?items.length:k==='asked'?items.filter(asked).length:items.filter(i=>(k==='open')===open(i)).length})</button>`).join('')}</div>
+ ${shown.length?shown.map(i=>`<div class="card item ${i.severity} ${open(i)?'':'reviewed'}"><div class="row">${badge(i.type.replace(/_/g,' '),'info')} ${badge(i.severity)} ${badge(open(i)?'open':'reviewed')} <span class="loc">${esc(i.id)} · detected ${fmt(i.detected_at)}</span></div>
+  <div style="margin:4px 0 6px">${esc(i.summary)}</div>
+  ${asked(i)?`<div class="loc">Raised by: ${i.asked.map(a=>'“'+esc(a.question)+'”').join(' · ')}</div>`:`<div class="loc">Found automatically when the documents were compared. No question has run into it yet.</div>`}
+  <details><summary>Evidence (${i.evidence.length})</summary>${i.evidence.map(e=>`<div class="loc" style="margin-top:6px"><b>${esc(e.doc_title)}</b> · ${esc(e.location)}</div><div class="quote">${esc(e.quote)}</div>`).join('')}</details>
+  ${open(i)?`<div class="row" style="margin-top:8px"><input type="text" class="rn" placeholder="Reviewer name" value="${esc(who)}" style="width:160px"><select class="rd">${decs.map(d=>`<option>${esc(d)}</option>`).join('')}</select><input type="text" class="nt grow" placeholder="Note (optional)"><button class="btn sm rb" data-id="${i.id}">Record decision</button></div>`
+   :`<div class="loc" style="margin-top:6px"><b>${esc(i.status.replace('reviewed - ',''))}</b> · ${esc(i.reviewer||'')} · ${fmt(i.decided_at)}${i.note?' · '+esc(i.note):''} <button class="btn sec sm ro" data-id="${i.id}" style="margin-left:8px">Reopen</button></div>`}</div>`).join('')
+  :'<div class="empty">Nothing here yet. Ask a question in the chat bubble that touches a conflict, then come back. “All open” shows every item found without a question.</div>'}`;
+ document.querySelectorAll('[data-f]').forEach(c=>c.onclick=()=>{FILTER=c.dataset.f;vReview()});
+ document.querySelectorAll('.rb').forEach(b=>b.onclick=async()=>{const c=b.closest('.card');const n=c.querySelector('.rn').value;
+  try{await post('/api/review/'+b.dataset.id,{decision:c.querySelector('.rd').value,reviewer:n,note:c.querySelector('.nt').value});try{localStorage.setItem('reviewer',n)}catch(e){}vReview()}catch(e){alert(e.message)}});
+ document.querySelectorAll('.ro').forEach(b=>b.onclick=async()=>{await post('/api/review/'+b.dataset.id,{decision:'reopen'});vReview()})}
+
+// ---------- 5. evaluation ----------
+function md(t){const L=t.split('\n');let o='',i=0,ul=false;const inl=s=>esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/`(.+?)`/g,'<code>$1</code>');
+ const close=()=>{if(ul){o+='</ul>';ul=false}};
+ while(i<L.length){const l=L[i];
+  if(/^\|/.test(l)&&/^\|[-| :]+\|?$/.test(L[i+1]||'')){close();const h=l.split('|').slice(1,-1);o+='<table><tr>'+h.map(c=>`<th>${inl(c.trim())}</th>`).join('')+'</tr>';i+=2;
+   while(i<L.length&&/^\|/.test(L[i])){o+='<tr>'+L[i].split('|').slice(1,-1).map(c=>`<td>${inl(c.trim())}</td>`).join('')+'</tr>';i++}o+='</table>';continue}
+  const m=l.match(/^(#{1,3})\s+(.*)/);if(m){close();o+=`<h${m[1].length}>${inl(m[2])}</h${m[1].length}>`}
+  else if(/^[-*]\s+/.test(l)){if(!ul){o+='<ul>';ul=true}o+=`<li>${inl(l.replace(/^[-*]\s+/,''))}</li>`}
+  else if(l.trim()){close();o+=`<p>${inl(l)}</p>`}else close();i++}
+ close();return o}
+function evRows(rs){return rs.map(r=>{const exp=Array.isArray(r.expected)?r.expected.join(', '):r.expected;return `<tr><td><b>${esc(r.id)}</b></td><td>${esc(r.type)}</td><td>${esc(r.question)}</td><td class="loc">${esc(exp)}</td><td class="loc">${esc((r.expected_sources||[]).join('; ')||'–')}</td>
+  <td><details><summary>${esc((r.observed||'').slice(0,110))}…</summary><div style="white-space:pre-wrap">${esc(r.observed)}</div><div class="loc" style="margin-top:4px">${(r.cited||[]).map(esc).join('<br>')}</div></details></td>
+  <td>${r.citation_valid===true?'yes':r.citation_valid===false?'<b class="err">NO</b>':'n/a'}</td><td>${badge(r.result)}</td><td class="loc">${esc(r.failure_category)}</td></tr>`}).join('')}
+const EVHEAD='<tr><th>ID</th><th>Type</th><th>Question</th><th>Expected</th><th>Expected source</th><th>Observed output</th><th>Citations valid</th><th>Result</th><th>Failure category</th></tr>';
+async function vEval(){
+ const E=await api('/api/eval');const G=E.generated;const gs=G?G.results:[];const gp=gs.filter(r=>r.result==='PASS').length;
+ $('main').innerHTML=`<h1>3 · Evaluation</h1><p class="sub2">A test of the system on the documents loaded right now. The questions are written on the spot from your sources, so changing the sources never breaks it.</p>
+ <div class="card"><div class="row"><button class="btn jobbtn" id="gen" ${S.indexed?'':'disabled data-off="1"'}>Generate the evaluation and run it</button><span class="mute">${S.indexed?'The model writes about 10 questions from passages of your documents (code checks that each answer is really in the passage), plus 2 questions no document can answer. Then it runs them and writes the failure report.':'Add sources first (Sources tab).'}</span></div>
+  ${G?`<div class="row"><b style="font-size:18px">${gp}/${gs.length} passed</b><span class="mute">run ${fmt(G.run_at)} · model ${esc(G.model)} · ${G.sources.length} documents</span></div>`:''}</div>
+ ${G?`<div class="card" style="overflow:auto"><table>${EVHEAD}${evRows(gs)}</table></div><div class="loc">Expected source = the passage the question was written from. An answerable question passes when the expected fact is in the answer, the expected document is cited and every citation is valid. An unanswerable one passes only if the answer is "not verified".</div>
+ <h3>Failure report and recommended documentation improvements</h3><div class="card md">${md(G.report||'')}</div>`:''}`;
+ if($('gen'))$('gen').onclick=()=>runJob('/api/eval/generate')}
+
+(async()=>{nav();initChat();try{const j=await api('/api/job');if(j.state==='running')watch()}catch(e){}go('src')})();
+</script></body></html>

@@ -1,0 +1,210 @@
+{
+ "documents": [
+  {
+   "doc_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+   "title": "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+   "url": "https://www.cavliwireless.com/iot-modules/c-series/c16qs",
+   "doc_type": "web page",
+   "kind": "html",
+   "parser": "generic",
+   "module": "documents",
+   "notes": "Added by the user.",
+   "versions": [
+    {
+     "version": 1,
+     "sha256": "a79c9103fe55cebe5304cd678caeb6c4db949b32228292f94bf5dc0437e6227e",
+     "fetched_at": "2026-11-21T14:05:51+00:00",
+     "file": "data/versions/c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel.v1.html",
+     "status": "current",
+     "http_last_modified": null,
+     "bytes": 309369,
+     "source_url": "https://www.cavliwireless.com/iot-modules/c-series/c16qs",
+     "host": "www.cavliwireless.com",
+     "label": null,
+     "provenance": "added by the user by link (public)",
+     "revision": null,
+     "published": null,
+     "date_note": null
+    }
+   ],
+   "watch_url": "https://www.cavliwireless.com/iot-modules/c-series/c16qs"
+  },
+  {
+   "doc_id": "declaration-of-authorization",
+   "title": "Declaration of Authorization",
+   "url": "https://d8wojkg2185gh.cloudfront.net/strapi/C16_QS_Declaration_of_Conformity_cb491e43d4.pdf",
+   "doc_type": "PDF document",
+   "kind": "pdf",
+   "parser": "generic",
+   "module": "documents",
+   "notes": "Added by the user.",
+   "versions": [
+    {
+     "version": 1,
+     "sha256": "425215fa8ed320d5f25230bea670e5aae0d0fb97534f8a4159506a9cf1e54c2b",
+     "fetched_at": "2026-11-21T14:05:56+00:00",
+     "file": "data/versions/declaration-of-authorization.v1.pdf",
+     "status": "current",
+     "http_last_modified": "Tue, 28 Oct 2025 10:44:45 GMT",
+     "bytes": 96910,
+     "source_url": "https://d8wojkg2185gh.cloudfront.net/strapi/C16_QS_Declaration_of_Conformity_cb491e43d4.pdf",
+     "host": "d8wojkg2185gh.cloudfront.net",
+     "label": null,
+     "provenance": "added by the user by link (public)",
+     "pdf": {
+      "pages": 1,
+      "pdf_metadata": {
+       "Title": "Declaration of Authorization",
+       "Author": "hbreevoort",
+       "Creator": "Microsoft® Word 2021",
+       "CreationDate": "D:20250910150523+05'30'",
+       "ModDate": "D:20250910150523+05'30'",
+       "Producer": "Microsoft® Word 2021"
+      },
+      "hardware_version": "v1.1",
+      "software_version": "v1.5.5",
+      "date_of_issue": "September 10, 2025"
+     },
+     "revision": "hardware v1.1 / software v1.5.5",
+     "published": "September 10, 2025",
+     "date_note": "PDF created 2025-09-10; hosted copy last modified 2025-10-28"
+    }
+   ],
+   "watch_url": "https://d8wojkg2185gh.cloudfront.net/strapi/C16_QS_Declaration_of_Conformity_cb491e43d4.pdf"
+  },
+  {
+   "doc_id": "lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for",
+   "title": "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions",
+   "url": "https://www.cavliwireless.com/iot-modules/lte-Cat1-bis-iot-module",
+   "doc_type": "web page",
+   "kind": "html",
+   "parser": "generic",
+   "module": "documents",
+   "notes": "Added by the user.",
+   "versions": [
+    {
+     "version": 1,
+     "sha256": "20ef5d482d825d1e2d18d34f99e28f0261b27d61a6be90c080af554d957dca0b",
+     "fetched_at": "2026-11-21T14:06:00+00:00",
+     "file": "data/versions/lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for.v1.html",
+     "status": "current",
+     "http_last_modified": null,
+     "bytes": 206968,
+     "source_url": "https://www.cavliwireless.com/iot-modules/lte-Cat1-bis-iot-module",
+     "host": "www.cavliwireless.com",
+     "label": null,
+     "provenance": "added by the user by link (public)",
+     "revision": null,
+     "published": null,
+     "date_note": null
+    }
+   ],
+   "watch_url": "https://www.cavliwireless.com/iot-modules/lte-Cat1-bis-iot-module"
+  },
+  {
+   "doc_id": "cavli-hubble-faq-device-management-connectivity-support",
+   "title": "Cavli Hubble FAQ | Device Management, Connectivity & Support",
+   "url": "https://www.cavliwireless.com/faq/c-series-faq",
+   "doc_type": "web page",
+   "kind": "html",
+   "parser": "generic",
+   "module": "documents",
+   "notes": "Added by the user.",
+   "versions": [
+    {
+     "version": 1,
+     "sha256": "a77eaae2c17e57b5eb3d84ba04e02688cfafb38583ac57c855f803f57867d388",
+     "fetched_at": "2026-11-21T14:06:03+00:00",
+     "file": "data/versions/cavli-hubble-faq-device-management-connectivity-support.v1.html",
+     "status": "current",
+     "http_last_modified": null,
+     "bytes": 147185,
+     "source_url": "https://www.cavliwireless.com/faq/c-series-faq",
+     "host": "www.cavliwireless.com",
+     "label": null,
+     "provenance": "added by the user by link (public)",
+     "revision": null,
+     "published": null,
+     "date_note": null
+    }
+   ],
+   "watch_url": "https://www.cavliwireless.com/faq/c-series-faq"
+  },
+  {
+   "doc_id": "c16qs-technical-specification-document",
+   "title": "C16QS Technical Specification Document",
+   "url": "uploaded file: C16QS Technical Specification Document V2.0.pdf",
+   "doc_type": "PDF document",
+   "kind": "pdf",
+   "parser": "generic",
+   "module": "documents",
+   "notes": "Added by the user.",
+   "versions": [
+    {
+     "version": 1,
+     "sha256": "4cf03b908105a9e5d0be1333ddd6e24a35217b1fb758a4f56028f4db2d303a99",
+     "fetched_at": "2026-11-21T14:07:31+00:00",
+     "file": "data/versions/c16qs-technical-specification-document.v1.pdf",
+     "status": "superseded",
+     "http_last_modified": null,
+     "bytes": 1022328,
+     "source_url": "uploaded file: C16QS Technical Specification Document V2.0.pdf",
+     "host": "uploaded by the user",
+     "label": "V2.0",
+     "provenance": "uploaded by the user (not downloaded from a public link)",
+     "pdf": {
+      "pages": 8,
+      "pdf_metadata": {
+       "Author": "Abhijith C J",
+       "CreationDate": "D:20231108103725+05'30'",
+       "Creator": "Canva",
+       "Keywords": "DAFmPxN7pfE,BAFgz_QtNK8",
+       "ModDate": "D:20231108103725+05'30'",
+       "Producer": "GPL Ghostscript 10.01.1",
+       "Title": "C16QS Cat 1.bis landscape"
+      },
+      "hardware_version": null,
+      "software_version": null,
+      "date_of_issue": null
+     },
+     "revision": "V2.0 (label typed by the user; the PDF does not state a version)",
+     "published": null,
+     "date_note": "PDF created 2023-11-08",
+     "superseded_by": 2
+    },
+    {
+     "version": 2,
+     "sha256": "39bfbf68c7625c31fd76d0049c4bf79aefca21897639f4b8a36df78d10ab1dee",
+     "fetched_at": "2026-11-21T14:08:35+00:00",
+     "file": "data/versions/c16qs-technical-specification-document.v2.pdf",
+     "status": "current",
+     "http_last_modified": null,
+     "bytes": 2754005,
+     "source_url": "uploaded file: C16QS Technical Specification Document V2.9.pdf",
+     "host": "uploaded by the user",
+     "label": "V2.9",
+     "provenance": "uploaded by the user (not downloaded from a public link)",
+     "pdf": {
+      "pages": 6,
+      "pdf_metadata": {
+       "Title": "C16QS Cat1.bis Latest",
+       "Creator": "Canva",
+       "Producer": "Canva",
+       "CreationDate": "D:20250321060825+00'00'",
+       "ModDate": "D:20250321060824+00'00'",
+       "Keywords": "DAGY9VMnbZQ,BAGDNdMKrwg,0",
+       "Author": "Cavli Wireless"
+      },
+      "hardware_version": null,
+      "software_version": null,
+      "date_of_issue": null
+     },
+     "revision": "V2.9 (label typed by the user; the PDF does not state a version)",
+     "published": null,
+     "date_note": "PDF created 2025-03-21"
+    }
+   ]
+  }
+ ],
+ "not_accessible": []
+}

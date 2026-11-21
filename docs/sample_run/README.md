@@ -1,0 +1,1 @@
+Output of one demo run (see `docs/demo_sources.md`): `inventory.json` (source inventory with metadata), `review_queue.json` (conflicts, changes, provenance), `eval_generated.json` (generated evaluation, observed outputs) and `failure_report.md`. The application itself starts empty; this is only a sample.

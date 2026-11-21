@@ -1,0 +1,287 @@
+[
+ {
+  "id": "RV-22807903",
+  "type": "conflict",
+  "severity": "high",
+  "summary": "number of C16QS regional variants: C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless says 5; C16QS Technical Specification Document says 7.",
+  "evidence": [
+   {
+    "doc_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+    "doc_title": "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+    "location": "About",
+    "passage_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel@v1#1",
+    "quote": "The C16QS module is available in regional variants tailored for different deployment markets: C16QS-EAJ for Eurasia and Japan, C16QS-NA for North America, C16QS-LA for Latin America, C16QS-AN for Australia and New Zealand, and C16QS-WW for global use cases."
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document (V2.9)",
+    "location": "page 2",
+    "passage_id": "c16qs-technical-specification-document@v2#2",
+    "quote": "C16QS comes in 7 variants - Eurasia and Japan, North America, Latin America, South-East\nAsia, Europe alone, Indian alone and Global variant respectively, covering different countries\nand regions."
+   }
+  ],
+  "doc_ids": [
+   "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+   "c16qs-technical-specification-document"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:08:43+00:00"
+ },
+ {
+  "id": "RV-d42f2e90",
+  "type": "conflict",
+  "severity": "high",
+  "summary": "C16QS variants/regions count: C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless says 5 variants/regions; C16QS Technical Specification Document says 7 variants.",
+  "evidence": [
+   {
+    "doc_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+    "doc_title": "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+    "location": "FAQ",
+    "passage_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel@v1#25",
+    "quote": "WW variants are suitable for global deployments, NA variants for North America, EU variants for Europe, IN variants for India, and AN variants for Australia and New Zealand."
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document (V2.9)",
+    "location": "page 2",
+    "passage_id": "c16qs-technical-specification-document@v2#2",
+    "quote": "C16QS comes in 7 variants - Eurasia and Japan, North America, Latin America, South-East\nAsia, Europe alone, Indian alone and Global variant respectively, covering different countries\nand regions."
+   }
+  ],
+  "doc_ids": [
+   "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+   "c16qs-technical-specification-document"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:08:55+00:00"
+ },
+ {
+  "id": "RV-86b6d7c7",
+  "type": "conflict",
+  "severity": "high",
+  "summary": "variant count: C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless says 14; C16QS Technical Specification Document says 7.",
+  "evidence": [
+   {
+    "doc_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+    "doc_title": "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+    "location": "Variants",
+    "passage_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel@v1#15",
+    "quote": "Variants available for ordering samples:"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document (V2.9)",
+    "location": "page 2",
+    "passage_id": "c16qs-technical-specification-document@v2#2",
+    "quote": "C16QS comes in 7 variants - Eurasia and Japan, North America, Latin America, South-East\nAsia, Europe alone, Indian alone and Global variant respectively, covering different countries\nand regions."
+   }
+  ],
+  "doc_ids": [
+   "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+   "c16qs-technical-specification-document"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:09:17+00:00"
+ },
+ {
+  "id": "RV-f4c0b990",
+  "type": "conflict",
+  "severity": "high",
+  "summary": "supported GNSS systems/bands: C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless says GPS and BeiDou; LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions says GNA-L1 and GNB-L1+L5 (L5 for IRNSS/GPS).",
+  "evidence": [
+   {
+    "doc_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+    "doc_title": "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+    "location": "FAQ",
+    "passage_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel@v1#24",
+    "quote": "Yes, C16QS supports optional GNSS with GPS and BeiDou."
+   },
+   {
+    "doc_id": "lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for",
+    "doc_title": "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions",
+    "location": "Highlights and Advantages of C-Series LTE Cat 1bis Modules",
+    "passage_id": "lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for@v1#4",
+    "quote": "It supports the GNA-L1 band and GNB-L1+L5 (L5 for IRNSS/GPS) bands."
+   }
+  ],
+  "doc_ids": [
+   "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+   "lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:06:36+00:00"
+ },
+ {
+  "id": "RV-da3a12cb",
+  "type": "missing_revision_metadata",
+  "severity": "low",
+  "summary": "3 source(s) state no revision, version or publication date (C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless; LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions; Cavli Hubble FAQ | Device Management, Connectivity & Support). When they disagree it cannot be established which one is newer; only the fetch date and a content hash are recorded.",
+  "evidence": [
+   {
+    "doc_id": "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+    "doc_title": "C16QS LTE Cat 1bis IoT Module with eSIM and GNSS | Cavli Wireless",
+    "location": "document metadata",
+    "passage_id": null,
+    "quote": "no revision or publication date stated"
+   },
+   {
+    "doc_id": "lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for",
+    "doc_title": "LTE Cat 1bis IoT Modules: Low Power, Reliable Connectivity for IoT Solutions",
+    "location": "document metadata",
+    "passage_id": null,
+    "quote": "no revision or publication date stated"
+   },
+   {
+    "doc_id": "cavli-hubble-faq-device-management-connectivity-support",
+    "doc_title": "Cavli Hubble FAQ | Device Management, Connectivity & Support",
+    "location": "document metadata",
+    "passage_id": null,
+    "quote": "no revision or publication date stated"
+   }
+  ],
+  "doc_ids": [
+   "c16qs-lte-cat-1bis-iot-module-with-esim-and-gnss-cavli-wirel",
+   "cavli-hubble-faq-device-management-connectivity-support",
+   "lte-cat-1bis-iot-modules-low-power-reliable-connectivity-for"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:07:26+00:00"
+ },
+ {
+  "id": "RV-47e81c60",
+  "type": "provenance",
+  "severity": "low",
+  "summary": "1 document(s) were uploaded as files, so their origin and authenticity cannot be checked from a public link: C16QS Technical Specification Document.",
+  "evidence": [
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "inventory",
+    "passage_id": null,
+    "quote": "uploaded file: C16QS Technical Specification Document V2.9.pdf | PDF created 2025-03-21"
+   }
+  ],
+  "doc_ids": [
+   "c16qs-technical-specification-document"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:08:29+00:00"
+ },
+ {
+  "id": "RV-e7721bf3",
+  "type": "revision_change",
+  "severity": "medium",
+  "summary": "C16QS Technical Specification Document changed from V2.0 to V2.9: 15 difference(s) found. V2.0 is outdated; answers use V2.9. The old version is kept for audit.",
+  "evidence": [
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Number and names of C16QS variants: C16QS comes in 5 variants -  Europe and Asia, South East Asia, North America, Latin America and  ->  C16QS comes in 7 variants - Eurasia and Japan, North America, Latin America, South-East"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Variant list continued: Global variant respectively, covering different countries and regions. Being pin compatible with Cavli | Low Power | Power  ->  Asia, Europe alone, Indian alone and Global variant respectively, covering different countries"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Pin compatibility statement removed: C42QM and C42GM modules which enables easy migration.  ->  not stated"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Region codes changed: Region covered | EA: EMEA and APAC | NA: North America | AN: Australia, New Zealand, Taiwan, Japan and S. Korea | LA: Latin America | WW: Global  ->  Region | EAJ / EU/ NA/ AN/ LA / IN / WW"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Pin count added: not stated  ->  Pin Count | 102"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Operating temperature changed: Operating Temparature | EA: -30°C to +85 °C | NA: -30°C to +85 °C | AN: -30°C to +85 °C | LA: -30 °C to +85 °C | WW: -30 °C to +85 °C  ->  Operating Temperature | -40 °C to +85 °C"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "LTE band list changed: LTE Band List | EA: B1/ B3/ B5/ B8/ B20 | NA: B2/ B4/ B5/ B12/ B13/ B66 | AN: B1/ B3/ B5/ B8/ B18/ B19/ B26/ B28 | LA: B2/ B3/ B4/ B7/ B8/ B28 | WW: B1/ B2/ B3/ B4/ B5/ B8/ B12/ B18/ B19/ B20/ B26/ B28/ B66  ->  WW - 1/ 2/ 3/ 4/ 5/ 7/ 8/ 12/ 13/ 18/ 19/ 20/ 25/ 26/ 28/ 40/ 41/ 66"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Peak transmit current changed: TxD Peak (@23dBm) | EA: 620 mA | NA: 620 mA | AN: TBD | LA: TBD | WW: TBD  ->  Tx Peak (@23dBm) | 650.88 mA"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Transmit idle current changed: TxD Idle (@23dBm) | EA: 18 mA | NA: 16 mA | AN: TBD | LA: TBD | WW: TBD  ->  Tx Idle (USB disconnected) | 5.1 mA"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Sleep mode value added: Sleep Mode | EA: TBD | NA: TBD | AN: TBD | LA: TBD | WW: TBD  ->  Sleep Mode (Hibernate) | 11 µA"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "AGNSS support removed: AGNSS Support | EA: Yes | NA: Yes | AN: Yes | LA: Yes | WW: Yes  ->  not stated"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "USB driver support changed: USB Driver | EA: Windows 7 and above, Linux Kernel 4.4 – 5.15 | NA: Windows 7 and above, Linux Kernel 4.4 – 5.15 | AN: Windows 7 and above, Linux Kernel 4.4 – 5.15 | LA: Windows 7 and above, Linux Kernel 4.4 – 5.15 | WW: Windows 7 and above, Linux Kernel 4.4  ->  USB Driver | RNDIS / CDC-ECM / CDC-ACM"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "Carrier status changed: Carrier | EA: Telefonica   /DT /Orange | NA: Verizon    /AT&T /T-Mobile | AN: TBD | LA: TBD | WW: Verizon    /AT&T /TMobile  ->  Carrier | TBD"
+   },
+   {
+    "doc_id": "c16qs-technical-specification-document",
+    "doc_title": "C16QS Technical Specification Document",
+    "location": "V2.0 -> V2.9",
+    "passage_id": null,
+    "quote": "miniPCIe form factor option added: not stated  ->  miniPCIe Form Factor | Optional"
+   }
+  ],
+  "doc_ids": [
+   "c16qs-technical-specification-document"
+  ],
+  "status": "open - needs expert review",
+  "detected_at": "2026-11-21T14:09:46+00:00",
+  "asked": [
+   {
+    "question": "What is the sleep mode current?",
+    "at": "2026-11-21T14:09:51+00:00"
+   }
+  ]
+ }
+]

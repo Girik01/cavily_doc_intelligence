@@ -1,0 +1,640 @@
+{
+ "results": [
+  {
+   "id": "A1",
+   "type": "answerable",
+   "question": "Who is the manufacturer named in the EU Declaration of Conformity and where is it located?",
+   "expected": [
+    "Cavli Inc",
+    "San Jose"
+   ],
+   "expected_sources": [
+    "c16qs-eu-doc / page 1"
+   ],
+   "observed_kind": "answer",
+   "observed": "The EU Declaration of Conformity names the manufacturer as Cavli Inc., located at 99 South Almaden Blvd., Suite 600, San Jose, CA 95113 United States. [1]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 1 of 2)"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 5214,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A2",
+   "type": "answerable",
+   "question": "Which notified body and which EU-type examination certificate number appear in the declaration?",
+   "expected": [
+    "Kiwa",
+    "0063",
+    "242140368/AA/01"
+   ],
+   "expected_sources": [
+    "c16qs-eu-doc / page 1"
+   ],
+   "observed_kind": "answer",
+   "observed": "The EU Declaration of Conformity says the Notified Body is Kiwa Nederland B.V., with Notified Body number 0063, and the issued EU-type examination certificate is 242140368/AA/01. [1][2]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 1 of 2)",
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 2 of 2)"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3553,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A3",
+   "type": "answerable",
+   "question": "What hardware version and software version are stated in the EU Declaration of Conformity?",
+   "expected": [
+    "v1.1",
+    "v1.5.5"
+   ],
+   "expected_sources": [
+    "c16qs-eu-doc / page 1"
+   ],
+   "observed_kind": "answer",
+   "observed": "Hardware version: v1.1. [1]\nSoftware version: v1.5.5. [1]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 2 of 2)"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3067,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A4",
+   "type": "answerable",
+   "question": "Which LTE bands does the C16QS support in Europe?",
+   "expected": [
+    "1/3/5/7/8/20/28"
+   ],
+   "expected_sources": [
+    "c16qs-product-page / Bands – EU",
+    "c16qs-tech-spec / Radio Frequency Bands"
+   ],
+   "observed_kind": "answer",
+   "observed": "For Europe, the C16QS product page lists EU bands 1/3/5/7/8/20/28. [1]\n\nThe category page lists EMEA / APAC bands as B1 / B3 / B5 / B8 / B20. [2]",
+   "cited": [
+    "Cavli C16QS LTE Cat 1bis IoT Module (product page) - Bands – EU",
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Highlights and Advantages of C-Series LTE Cat 1bis Modules"
+   ],
+   "ambiguous": true,
+   "clarifying_question": "Do you mean the product-page EU variant or the category-page EMEA/APAC listing?",
+   "latency_ms": 3860,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A5",
+   "type": "answerable",
+   "question": "What are the peak downlink and uplink speeds of the C16QS?",
+   "expected": [
+    "10 Mbps",
+    "5 Mbps"
+   ],
+   "expected_sources": [
+    "c16qs-product-page / Data speeds",
+    "c16qs-tech-spec / Radio Frequency Bands"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS supports peak LTE Cat 1bis speeds of 10 Mbps downlink and 5 Mbps uplink. [1][2]",
+   "cited": [
+    "Cavli C16QS LTE Cat 1bis IoT Module (product page) - Data speeds",
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Highlights and Advantages of C-Series LTE Cat 1bis Modules"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3028,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A6",
+   "type": "answerable",
+   "question": "How many UART interfaces does the C16QS have?",
+   "expected": [
+    "3"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Interfaces",
+    "c16qs-product-page / Interfaces"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS has 3 UART interfaces. [1][2][3][4]",
+   "cited": [
+    "Cavli C16QS LTE Cat 1bis IoT Module (product page) - FAQ",
+    "C16QS Cat 1.bis LTE Module - Technical Specification Document (V2.9) - page 3, Interfaces",
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Comparison table – Find the Right LTE Cat 1bis IoT Module for Your Deployment",
+    "Cavli C16QS LTE Cat 1bis IoT Module (product page) - Interfaces"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 2951,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A7",
+   "type": "answerable",
+   "question": "Which EMC standards does the declaration list?",
+   "expected": [
+    "301 489-1",
+    "301 489-19",
+    "301 489-52"
+   ],
+   "expected_sources": [
+    "c16qs-eu-doc / page 1"
+   ],
+   "observed_kind": "answer",
+   "observed": "The EU Declaration of Conformity lists these EMC standards: ETSI EN 301 489-1 V2.2.3(2019-11), ETSI EN 301 489-19 V2.2.1(2022-09), and ETSI EN 301 489-52 V1.2.1 (2021-11). [1]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 1 of 2)"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3115,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A8",
+   "type": "answerable",
+   "question": "What is the sleep mode (hibernate) current of the C16QS?",
+   "expected": [
+    "11 µA"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Electrical Characteristics"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS sleep mode (hibernate) current is 11 µA, according to the C16QS Cat 1.bis LTE Module - Technical Specification Document V2.9, where V2.9 is the label from the file name of a distributor-hosted copy from endrich.com and the PDF does not state a version. [1]",
+   "cited": [
+    "C16QS Cat 1.bis LTE Module - Technical Specification Document (V2.9) - page 4, Electrical Characteristics"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3516,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A9",
+   "type": "answerable",
+   "question": "How many pins does the C16QS have?",
+   "expected": [
+    "102"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Basic Information"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS has a pin count of 102, according to the current C16QS Cat 1.bis LTE Module - Technical Specification Document V2.9, with the V2.9 label from the file name of a third-party distributor copy from endrich.com. [1][2]",
+   "cited": [
+    "C16QS Cat 1.bis LTE Module - Technical Specification Document (V2.9) - page 3, Basic Information",
+    "Flagged for expert review - RV-a4a9e9bd"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3594,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "A10",
+   "type": "answerable",
+   "question": "Which CPU and memory does the C16QS use?",
+   "expected": [
+    "Cortex M3",
+    "4MB NOR Flash",
+    "1.25MB RAM"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Basic Information"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS uses an ARM Cortex M3 processor @204MHz clock and 4MB NOR Flash + 1.25MB RAM, according to the Technical Specification Document V2.9, whose revision label comes from the file name and whose source is the distributor endrich.com. [1]",
+   "cited": [
+    "C16QS Cat 1.bis LTE Module - Technical Specification Document (V2.9) - page 3, Basic Information"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3315,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "B1",
+   "type": "ambiguous",
+   "question": "Which bands does the C16QS support?",
+   "expected": "asks which region, or answers per region",
+   "expected_sources": [
+    "c16qs-tech-spec / Radio Frequency Bands",
+    "c16qs-product-page / Bands"
+   ],
+   "observed_kind": "answer",
+   "observed": "The C16QS band support depends on the region or variant, and some regional band lists are flagged as conflicting. [1][2][3][4][5]\n\nWW / Worldwide: the category page comparison table lists 1 / 2 / 3 / 4 / 5 / 7 / 8 / 12 / 18 / 19 / 20 / 25 / 26 / 28 / 40 / 41 / 66, while the category page highlights list B1 / B2 / B3 / B4 / B5 / B7 / B8 / B12 / B18 / B19 / B20 / B25 / B26 / B28 / B40 / B41 / B66. [2][1] \n\nWW is flagged for expert review because the technical specification V2.9 lists WW as 1 / 2 / 3 / 4 / 5 / 7 / 8 / 12 / 13 / 18 / 19 / 20 / 25 / 26 / 28 / 40 / 41 / 66, while the product page lists 1/2/3/4/5/7/8/12/18/19/20/25/26/28/40/41/66. [5]\n\nNA / North America: the category page comparison table lists 2 / 4 / 5 / 12 / 25 / 66, while the category page highlights list B2 / B4 / B5 / B12 / B13 / B66. [2][1] \n\nNA is flagged for expert review because sources conflict: the category page highlights list NA as B2 / B4 / B5 / B12 / B13 / B66, the product page lists NA as 2/4/5/12/25/66, and the technical specification V2.9 lists NA as 2/ 4/ 5/ 12/ 13/ 25/ 66. [1][3][6]\n\nLA / Latin America: the category page comparison table lists 1 / 2 / 3 / 4 / 5 / 7 / 8, while the category page highlights list B2 / B3 / B4 / B7 / B8/ B28. [2][1] \n\nLA is flagged for expert review because sources conflict: the product page lists LA as 1/2/3/4/5/7/8, while the category page highlights list LA as B2 / B3 / B4 / B7 / B8/ B28. [4][1]\n\nAN / Aus & NZ: the category page comparison table lists 1 / 3 / 5 / 8 / 18 / 19 / 26 / 28, and the category page highlights list B1 / B3 / B5 / B8 / B18 / B19 / B26 / B28. [2][1]\n\nIN / India: the category page comparison table lists 1 / 3 / 5 / 8 / 40 / 41. [2]\n\nEAJ / EMEA / APAC / Japan: the category page comparison table lists 1 / 3 / 5 / 7 / 8 / 18 / 19 / 20 / 26 / 28 / 40 / 41. [2]\n\nEU: the category page comparison table lists 1 / 3 / 5 / 7 / 8 / 20 / 28. [2]\n\nEMEA / APAC: the category page highlights list B1 / B3 / B5 / B8 / B20. [1]",
+   "cited": [
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Highlights and Advantages of C-Series LTE Cat 1bis Modules",
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Comparison table – Find the Right LTE Cat 1bis IoT Module for Your Deployment",
+    "Flagged for expert review - RV-0aea672f",
+    "Flagged for expert review - RV-d791c9b9",
+    "Flagged for expert review - RV-98a27402",
+    "Flagged for expert review - RV-35b95ef3"
+   ],
+   "ambiguous": true,
+   "clarifying_question": "Which C16QS region or variant do you mean?",
+   "latency_ms": 10427,
+   "retrieval_hit": false,
+   "citation_valid": true,
+   "expected_source_cited": false,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "B2",
+   "type": "ambiguous",
+   "question": "Is the C16QS certified?",
+   "expected": "separates the EU declaration from the certifications listed in the specification and says the variant matters",
+   "expected_sources": [
+    "c16qs-eu-doc / page 1",
+    "c16qs-tech-spec / Certi"
+   ],
+   "observed_kind": "answer",
+   "observed": "For EU conformity, the EU Declaration of Conformity says C16QS and the WW type designations C16QS-WW-S00N, C16QS-WW-S00H, C16QS-WW-GNAN, and C16QS-WW-GNAH are in conformity with Radio Equipment Directive 2014/53/EU, with listed Safety, EMC, Radio, and Health standards applied. [1]\n\nHowever, certification coverage is flagged for expert review because the EU Declaration of Conformity names only C16QS and four WW type designations, while other orderable variants listed elsewhere are not named in the declaration. [1][2][3]\n\nThe declaration is also flagged for document issues: its PDF metadata title is “Declaration of Authorization” while the document heading is “EU Declaration of Conformity (DoC),” and it describes the product as “LTE MODEM” while the object statement calls the device a “Mobile Phone.” [1][4][5]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 1 of 2)",
+    "Flagged for expert review - RV-1742842e",
+    "Flagged for expert review - RV-3727b3fc",
+    "Flagged for expert review - RV-16c8b7af",
+    "Flagged for expert review - RV-59f82281"
+   ],
+   "ambiguous": true,
+   "clarifying_question": "Which certification or regional variant are you asking about?",
+   "latency_ms": 6989,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "B3",
+   "type": "ambiguous",
+   "question": "What is the maximum current consumption of the C16QS?",
+   "expected": "asks which operating state (Tx peak, idle, sleep, GNSS fix) or lists them",
+   "expected_sources": [
+    "c16qs-tech-spec / Electrical Characteristics"
+   ],
+   "observed_kind": "answer",
+   "observed": "The maximum current consumption of the C16QS is not stated in the provided passages, but an expert-review note says the C16QS Technical Specification changed from V2.0 to V2.9 and that “Tx peak current” changed from “620 mA” to “650.88 mA.” [1]",
+   "cited": [
+    "Flagged for expert review - RV-05f8cac7"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3708,
+   "retrieval_hit": false,
+   "citation_valid": true,
+   "expected_source_cited": false,
+   "result": "FAIL",
+   "failure_category": "ambiguity_not_flagged",
+   "notes": []
+  },
+  {
+   "id": "U1",
+   "type": "unanswerable",
+   "question": "What is the AT command to read the signal strength on the C16QS?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "not_verified",
+   "observed": "Not verified in the available C16QS sources. The document that would normally answer this, the C16QS AT Command Manual, is not publicly accessible: Requires a login on the Cavli customer portal (cep.cavliwireless.com). Not public.",
+   "cited": [],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 2356,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "U2",
+   "type": "unanswerable",
+   "question": "What is the function of pin 12 in the C16QS pinout?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "not_verified",
+   "observed": "Not verified in the available C16QS sources. The document that would normally answer this, the C16QS Hardware Manual, is not publicly accessible: Requires a login on the Cavli customer portal (cep.cavliwireless.com). Not public.",
+   "cited": [],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 2045,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "U3",
+   "type": "unanswerable",
+   "question": "What is the receiver sensitivity of the C16QS in dBm?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "not_verified",
+   "observed": "Not verified in the available C16QS sources.",
+   "cited": [],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 2004,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "U4",
+   "type": "unanswerable",
+   "question": "Which firmware release fixes the eDRX wake-up bug in the C16QS?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "not_verified",
+   "observed": "Not verified in the available C16QS sources.",
+   "cited": [],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 2029,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "U5",
+   "type": "unanswerable",
+   "question": "What is the price of the C16QS and how many units are in stock?",
+   "expected": "not_verified",
+   "expected_sources": [],
+   "observed_kind": "not_verified",
+   "observed": "Not verified in the available C16QS sources.",
+   "cited": [],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 2228,
+   "retrieval_hit": null,
+   "citation_valid": null,
+   "expected_source_cited": null,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "C1",
+   "type": "conflict",
+   "question": "Which LTE bands does the C16QS support in North America?",
+   "expected": "conflict reported",
+   "expected_sources": [
+    "c16qs-product-page / Bands – NA",
+    "c16qs-tech-spec / Radio Frequency Bands"
+   ],
+   "observed_kind": "answer",
+   "observed": "The sources conflict on the C16QS LTE bands for North America: the product page lists 2/4/5/12/25/66 for region NA, while the category page lists NA as B2 / B4 / B5 / B12 / B13 / B66, and this conflict is flagged for review. [1][2][3]\n\nA further flagged conflict says the technical specification V2.9 lists NA as 2/ 4/ 5/ 12/ 13/ 25/ 66, while the product page lists 2/4/5/12/25/66; the V2.9 label comes from the file name and the copy is from distributor endrich.com. [1][4][5]",
+   "cited": [
+    "Cavli C16QS LTE Cat 1bis IoT Module (product page) - Bands – NA",
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Highlights and Advantages of C-Series LTE Cat 1bis Modules",
+    "Flagged for expert review - RV-0aea672f",
+    "Flagged for expert review - RV-35b95ef3",
+    "Flagged for expert review - RV-a4a9e9bd"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 4734,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "C2",
+   "type": "conflict",
+   "question": "What is the operating temperature range of the C16QS?",
+   "expected": "conflict reported",
+   "expected_sources": [
+    "c16qs-tech-spec / Basic Information",
+    "lte-cat1bis-category-page / Comparison table"
+   ],
+   "observed_kind": "answer",
+   "observed": "The sources conflict or are flagged for review on the C16QS operating temperature range: the current C16QS Cat 1.bis LTE Module - Technical Specification Document V2.9, with the V2.9 label from the distributor file name, says “-40 °C to +85 °C,” while the Cavli LTE Cat 1bis IoT Modules category page says “-45 °C to +85 °C.” [1][2][3][4]",
+   "cited": [
+    "C16QS Cat 1.bis LTE Module - Technical Specification Document (V2.9) - page 3, Basic Information",
+    "Cavli LTE Cat 1bis IoT Modules (category page) - Comparison table – Find the Right LTE Cat 1bis IoT Module for Your Deployment",
+    "Flagged for expert review - RV-393a2c9f",
+    "Flagged for expert review - RV-a4a9e9bd"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3808,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "C3",
+   "type": "conflict",
+   "question": "Does the EU Declaration of Conformity cover the C16QS-EU-GNAN variant?",
+   "expected": "conflict reported",
+   "expected_sources": [
+    "c16qs-eu-doc / page 1"
+   ],
+   "observed_kind": "answer",
+   "observed": "No. The current EU Declaration of Conformity lists the type designations as C16QS, C16QS-WW-S00N, C16QS-WW-S00H, C16QS-WW-GNAN, and C16QS-WW-GNAH; it does not list C16QS-EU-GNAN. [1][2][3]\nThis is flagged for review as a coverage gap because the EU Declaration of Conformity names only WW type designations, while other current sources list additional orderable variants, including EU-region variants. [2][3]\nThe product page lists C16QS-EU-GNAN as an orderable variant with GNSS Yes and eSIM No, but that does not establish that it is covered by the EU Declaration of Conformity. [4][2]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 1 of 2)",
+    "Flagged for expert review - RV-1742842e",
+    "Flagged for expert review - RV-3727b3fc",
+    "Cavli C16QS LTE Cat 1bis IoT Module (product page) - Variants"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 4466,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "C4",
+   "type": "conflict",
+   "question": "Does the EU Declaration of Conformity describe the C16QS as a modem or as a mobile phone?",
+   "expected": "conflict reported",
+   "expected_sources": [
+    "c16qs-eu-doc / page 1"
+   ],
+   "observed_kind": "answer",
+   "observed": "The EU Declaration of Conformity is internally inconsistent: it gives the product description as “LTE MODEM,” but the object statement says “The device is Mobile Phone, it supports 4G network and GPS, BDS function.” [1][2]",
+   "cited": [
+    "EU Declaration of Conformity (DoC) - C16QS - page 1 (part 1 of 2)",
+    "Flagged for expert review - RV-59f82281"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3193,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "R1",
+   "type": "revision",
+   "question": "How many regional variants does the current technical specification list, and which regions?",
+   "expected": [
+    "7"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Product Variants",
+    "c16qs-tech-spec / Basic Information"
+   ],
+   "observed_kind": "answer",
+   "observed": "The current technical specification V2.9 lists 7 regional variants: EAJ, EU, NA, AN, LA, IN, and WW. [1]\nThe V2.9 label comes from the file name, and the technical specification is a distributor-hosted copy from endrich.com. [1][2]",
+   "cited": [
+    "C16QS Cat 1.bis LTE Module - Technical Specification Document (V2.9) - page 3, Basic Information",
+    "Flagged for expert review - RV-a4a9e9bd"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3583,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": true,
+   "result": "PASS",
+   "failure_category": "-",
+   "notes": []
+  },
+  {
+   "id": "R2",
+   "type": "revision",
+   "question": "What operating temperature did the older V2.0 technical specification state?",
+   "expected": [
+    "-30"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Basic Information"
+   ],
+   "observed_kind": "answer",
+   "observed": "The older superseded V2.0 technical specification stated an operating temperature of -30 °C to +85 °C, as flagged in the V2.0-to-V2.9 revision-change note; V2.0 is outdated and kept for audit, and the technical-specification PDF V2.0 label comes from the file name from a distributor copy. [1]",
+   "cited": [
+    "Flagged for expert review - RV-05f8cac7"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 3469,
+   "retrieval_hit": true,
+   "citation_valid": true,
+   "expected_source_cited": false,
+   "result": "FAIL",
+   "failure_category": "citation_error (expected source not cited)",
+   "notes": []
+  },
+  {
+   "id": "R3",
+   "type": "revision",
+   "question": "What changed between V2.0 and V2.9 of the technical specification?",
+   "expected": [
+    "11 µA",
+    "650.88",
+    "102"
+   ],
+   "expected_sources": [
+    "c16qs-tech-spec / Electrical Characteristics"
+   ],
+   "observed_kind": "answer",
+   "observed": "Between V2.0 and V2.9 of the C16QS Cat 1.bis LTE Module Technical Specification Document, 17 differences are flagged, and V2.0 is described as outdated while answers use V2.9. [1]\nThe sources are flagged for provenance review because the technical specification PDFs V2.0 and V2.9 come from third-party distributor websites, mc-technologies.com and endrich.com, not from cavliwireless.com; the version labels come from the file names, and the PDFs state no version. [2]\nThe Bands EA entry changed from 1/3/5/8/20 in V2.0 to not stated in V2.9. [1]\nThe Bands EAJ entry changed from not stated in V2.0 to 1/3/5/7/8/18/19/20/26/28/40/41 in V2.9. [1]\nThe Bands EU entry changed from not stated in V2.0 to 1/3/5/7/8/20/28 in V2.9. [1]\nThe Bands IN entry changed from not stated in V2.0 to 1/3/5/8/40/41 in V2.9. [1]\nThe Bands LA entry changed from 2/3/4/7/8/28 in V2.0 to 1/2/3/4/5/7/8 in V2.9. [1]\nThe Bands NA entry changed from 2/4/5/12/13/66 in V2.0 to 2/4/5/12/13/25/66 in V2.9. [1]\nThe Bands WW entry changed from 1/2/3/4/5/8/12/18/19/20/26/28/66 in V2.0 to 1/2/3/4/5/7/8/12/13/18/19/20/25/26/28/40/41/66 in V2.9. [1]\nThe certifications named changed from CE, UKCA, IC, FCC, NCC, ANATEL, GCF, ICASA, PTCRB in V2.0 to CE, UKCA, IC, FCC, NCC, ANATEL, GCF, ICASA, PTCRB, RCM, TELEC in V2.9. [1]\nThe mention of pin compatibility with C42QM/C42GM changed from yes in V2.0 to no in V2.9. [1]\nThe operating temperature changed from -30 °C to +85 °C in V2.0 to -40 °C to +85 °C in V2.9. [1]\nThe number of orderable type designations changed from 20 in V2.0 to 28 in V2.9. [1]\nThe pin count changed from not stated in V2.0 to 102 in V2.9. [1]\nThe sleep current changed from TBD in V2.0 to 11 µA in V2.9. [1]\nThe Tx peak current changed from 620 mA in V2.0 to 650.88 mA in V2.9. [1]",
+   "cited": [
+    "Flagged for expert review - RV-05f8cac7",
+    "Flagged for expert review - RV-a4a9e9bd"
+   ],
+   "ambiguous": false,
+   "clarifying_question": "",
+   "latency_ms": 10052,
+   "retrieval_hit": false,
+   "citation_valid": true,
+   "expected_source_cited": false,
+   "result": "FAIL",
+   "failure_category": "citation_error (expected source not cited)",
+   "notes": []
+  }
+ ],
+ "retrieval_hit_at_8": {
+  "dense": "17/20",
+  "keyword": "16/20",
+  "hybrid": "17/20"
+ },
+ "model": "gpt-5.5",
+ "run_at": "2026-11-21T12:55:42+00:00"
+}

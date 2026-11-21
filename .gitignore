@@ -1,0 +1,16 @@
+.venv/
+.env
+qdrant_data/
+__pycache__/
+.idea/
+.DS_Store
+data/versions/
+data/raw/
+data/embed_cache.json
+data/eval_generated.json
+data/judge_cache.json
+data/revision_log.json
+data/inventory.json
+data/review_queue.json
+data/eval_generated.json
+data/raw/
